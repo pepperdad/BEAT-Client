@@ -1,4 +1,3 @@
-import React from "react";
 import { IconCheck, KakaoMapArrow } from "@assets/svgs";
 import { Toast } from "@components/commons";
 import { useToast } from "@hooks";
