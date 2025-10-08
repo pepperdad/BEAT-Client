@@ -1,3 +1,4 @@
+import React from "react";
 import { IconCheck, KakaoMapArrow } from "@assets/svgs";
 import { Toast } from "@components/commons";
 import { useToast } from "@hooks";
@@ -53,6 +54,39 @@ const PerformanceIntroduce = ({
     showToast();
   };
 
+  const convertTextToLink = (text: string) => {
+    const urlRegex = /(https?:\/\/[^\s]+?)(?=[.,;:!?)}\]]*(?:\s|$))/g;
+    const parts: (string | React.ReactElement)[] = [];
+    let lastIndex = 0;
+    let match;
+    let keyIndex = 0;
+
+    while ((match = urlRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+
+      parts.push(
+        <S.LinkText
+          key={`link-${keyIndex++}`}
+          href={match[0]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {match[0]}
+        </S.LinkText>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts;
+  };
+
   const handleLinkToKakaoMap = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const url = `https://map.kakao.com/link/map/${performanceVenue},${latitude},${longitude}`;
@@ -70,7 +104,7 @@ const PerformanceIntroduce = ({
       <S.Wrapper>
         <S.Container>
           <S.Title>공연소개</S.Title>
-          <S.Description>{description}</S.Description>
+          <S.Description>{convertTextToLink(description)}</S.Description>
         </S.Container>
         <DetailImage performanceImageList={performanceImageList} />
         <S.MapInfo>
