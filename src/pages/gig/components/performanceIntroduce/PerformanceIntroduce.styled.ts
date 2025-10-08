@@ -143,10 +143,10 @@ export const IconCopy = styled(IcomCopy)<{ $width: number; $height: number }>`
 `;
 
 export const LinkText = styled.a`
-  color: ${({ theme }) => theme.colors.blue_400};
+  color: #3c6dff;
   text-decoration: underline;
 
   &:visited {
-    color: #5856d6;
+    color: #9065ff;
   }
 `;

@@ -48,6 +48,8 @@ export const PerformanceTitle = styled.div`
   overflow: hidden;
 
   color: ${({ theme }) => theme.colors.white};
+  ${({ theme }) => theme.fonts["body1-normal-semi"]};
+  white-space: nowrap;
   text-overflow: ellipsis;
 `;
 
