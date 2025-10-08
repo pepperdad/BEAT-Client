@@ -9,21 +9,22 @@ export const Layer = styled.section<{ $width: number }>`
 `;
 
 export const FloatingBtnWrapper = styled.button<{ $showText: boolean }>`
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  background-color: ${({ theme }) => theme.colors.pink_400};
-  padding: 1rem;
-  border-radius: 50px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0px 0px 26px 0px rgba(251, 36, 127, 0.6);
-  transition: all 0.3s ease-in-out;
 
   position: absolute;
   right: 0;
-
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
   width: ${({ $showText }) => ($showText ? "12.7rem" : "5.2rem")};
+  padding: 1rem;
+  overflow: hidden;
+
+  background-color: ${({ theme }) => theme.colors.pink_400};
+  box-shadow: 0 0 26px 0 rgb(251 36 127 / 60%);
+  cursor: pointer;
+  border-radius: 50px;
+
+  transition: all 0.3s ease-in-out;
 `;
 
 export const FloatingText = styled.p<{ $showText: boolean }>`
@@ -35,22 +36,24 @@ export const FloatingText = styled.p<{ $showText: boolean }>`
     $showText
       ? css`
           transform: translateX(0);
+          opacity: 1;
+
           transition:
             transform 0.3s ease-in-out,
             opacity 0.3s ease-in-out;
-          opacity: 1;
         `
       : css`
           transform: translateX(50%);
+          opacity: 0;
+
           transition:
             transform 0.3s ease-in-out,
             opacity 0.3s ease-in-out;
-          opacity: 0;
         `}
 `;
 
 export const TicketIcon = styled(IconTicket)`
+  flex-shrink: 0;
   width: 3rem;
   height: 3rem;
-  flex-shrink: 0;
 `;
