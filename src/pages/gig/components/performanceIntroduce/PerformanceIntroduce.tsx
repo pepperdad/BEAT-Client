@@ -9,6 +9,7 @@ import { PerformanceImageList } from "../content/Content";
 import DetailImage from "../detailImage/DetailImage";
 import Contact from "./Contact";
 import * as S from "./PerformanceIntroduce.styled";
+import { convertTextToLink } from "@utils/convertTextToLink";
 
 interface PerformanceIntroduceProps {
   description: string;
@@ -52,39 +53,6 @@ const PerformanceIntroduce = ({
     navigator.clipboard.writeText(text);
 
     showToast();
-  };
-
-  const convertTextToLink = (text: string) => {
-    const urlRegex = /(https?:\/\/[^\s]+?)(?=[.,;:!?)}\]]*(?:\s|$))/g;
-    const parts: (string | React.ReactElement)[] = [];
-    let lastIndex = 0;
-    let match;
-    let keyIndex = 0;
-
-    while ((match = urlRegex.exec(text)) !== null) {
-      if (match.index > lastIndex) {
-        parts.push(text.substring(lastIndex, match.index));
-      }
-
-      parts.push(
-        <S.LinkText
-          key={`link-${keyIndex++}`}
-          href={match[0]}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {match[0]}
-        </S.LinkText>
-      );
-
-      lastIndex = match.index + match[0].length;
-    }
-
-    if (lastIndex < text.length) {
-      parts.push(text.substring(lastIndex));
-    }
-
-    return parts;
   };
 
   const handleLinkToKakaoMap = () => {
