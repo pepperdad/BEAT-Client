@@ -8,6 +8,7 @@ import { PerformanceImageList } from "../content/Content";
 import DetailImage from "../detailImage/DetailImage";
 import Contact from "./Contact";
 import * as S from "./PerformanceIntroduce.styled";
+import { convertTextToLink } from "@utils/convertTextToLink";
 
 interface PerformanceIntroduceProps {
   description: string;
@@ -70,7 +71,7 @@ const PerformanceIntroduce = ({
       <S.Wrapper>
         <S.Container>
           <S.Title>공연소개</S.Title>
-          <S.Description>{description}</S.Description>
+          <S.Description>{convertTextToLink(description)}</S.Description>
         </S.Container>
         <DetailImage performanceImageList={performanceImageList} />
         <S.MapInfo>
