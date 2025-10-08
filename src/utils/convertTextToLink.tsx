@@ -1,30 +1,36 @@
-import React from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 export const convertTextToLink = (text: string) => {
-  const urlRegex = /(https?:\/\/[^\s]+?)(?=[.,;:!?)}\]]*(?:\s|$))/g;
-  const parts: (string | React.ReactElement)[] = [];
+  const urlRegex = /https?:\/\/[^\s]+/g;
+
+  const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match;
   let keyIndex = 0;
 
-  while ((match = urlRegex.exec(text)) !== null) {
+  // 무한 루프 방지
+  let iterationCount = 0;
+  const maxIterations = 1000;
+
+  while ((match = urlRegex.exec(text)) !== null && iterationCount < maxIterations) {
+    iterationCount++;
+
     if (match.index > lastIndex) {
       parts.push(text.substring(lastIndex, match.index));
     }
 
+    let url = match[0];
+    const trailingPunctuationRegex = /[.,;:!?)}\]]+$/;
+    url = url.replace(trailingPunctuationRegex, "");
+
     parts.push(
-      <LinkText
-        key={`link-${keyIndex++}`}
-        href={match[0]}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {match[0]}
+      <LinkText key={`link-${keyIndex++}`} href={url} target="_blank" rel="noopener noreferrer">
+        {url}
       </LinkText>
     );
 
-    lastIndex = match.index + match[0].length;
+    lastIndex = match.index + url.length;
   }
 
   if (lastIndex < text.length) {
