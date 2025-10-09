@@ -122,7 +122,7 @@ const PerformanceIntroduce = ({
         <S.Divider />
         <S.Container>
           <S.Title>유의사항</S.Title>
-          <S.Description>{attentionNote}</S.Description>
+          <S.Description>{convertTextToLink(attentionNote)}</S.Description>
         </S.Container>
         <S.Divider />
         <Contact contact={contact} />
