@@ -1,4 +1,5 @@
-# BEAT  <img src="https://github.com/user-attachments/assets/9149a208-b89d-4780-a712-6e38b9b10461" width="100" align="left" />
+# BEAT <img src="https://github.com/user-attachments/assets/9149a208-b89d-4780-a712-6e38b9b10461" width="100" align="left" />
+
 간편하게 소규모 공연을 등록하고 관리할 수 있는 티켓 예매 플랫폼
 
 <img src="https://github.com/user-attachments/assets/0efee26a-a268-49ea-9ef9-dba61c685695" />
@@ -9,7 +10,6 @@
 <li>공연 예매하기</li>
 <li>공연 관리하기</li>
 <li>예매 조회하기</li>
-
 
 <h2> 👥 Team </h2>
 
@@ -66,19 +66,19 @@
 
    <div align="center">
 
-| 역할                 | 종류                                                                                                                                                                                                                                                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Library              | ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black)                                                                                                                                                                                                                              |
-| Programming Language | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)                                                                                                                                                                                                               |
-| Styling              | ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)                                                                                                                                                                                         |
-| Data Fetching        | ![React-Query](https://img.shields.io/badge/reactquery-FF4154.svg?style=for-the-badge&logo=reactquery&logoColor=white)  |  
-| State Management     | ![Jotai](https://img.shields.io/badge/jotai-000000.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4&logoColor=white)  |                                                                                                                                                                                 
+| 역할                 | 종류                                                                                                                                                                                                                                                                                                                                   |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Library              | ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black)                                                                                                                                                                                                                                     |
+| Programming Language | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)                                                                                                                                                                                                                      |
+| Styling              | ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)                                                                                                                                                                                                |
+| Data Fetching        | ![React-Query](https://img.shields.io/badge/reactquery-FF4154.svg?style=for-the-badge&logo=reactquery&logoColor=white)                                                                                                                                                                                                                 |
+| State Management     | ![Jotai](https://img.shields.io/badge/jotai-000000.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4&logoColor=white)                                                                                                                                                    |
 | Formatting           | ![ESLint](https://img.shields.io/badge/eslint-4B32C3.svg?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=white) ![StyleLint](https://img.shields.io/badge/stylelint-E0EFEF?style=for-the-badge&logo=stylelint&logoColor=000) |
-| Documentation        | ![StoryBook](https://img.shields.io/badge/storybook-FF4785.svg?style=for-the-badge&logo=storybook&logoColor=white)   |
-| Code Quality         | ![SonarCloud](https://img.shields.io/badge/sonarcloud-F3702A.svg?style=for-the-badge&logo=sonarcloud&logoColor=white)   |
-| Package Manager      | ![Yarn Berry](https://img.shields.io/badge/yarnberry-2C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)   |
-| Version Control      | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)                                                                                                                |
-| Deployment           | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)                                                                                                                                                                                                                           |
+| Documentation        | ![StoryBook](https://img.shields.io/badge/storybook-FF4785.svg?style=for-the-badge&logo=storybook&logoColor=white)                                                                                                                                                                                                                     |
+| Code Quality         | ![SonarCloud](https://img.shields.io/badge/sonarcloud-F3702A.svg?style=for-the-badge&logo=sonarcloud&logoColor=white)                                                                                                                                                                                                                  |
+| Package Manager      | ![Yarn Berry](https://img.shields.io/badge/yarnberry-2C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)                                                                                                                                                                                                                         |
+| Version Control      | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)                                                                                                                       |
+| Deployment           | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)                                                                                                                                                                                                                                  |
 
 </div>
 
@@ -157,11 +157,9 @@ rename : 파일 혹은 폴더명 변경
 
 [티팔놈들의 블로그 보러가기](https://team-beat.tistory.com/)
 
-
 <h3>🎸 비트 아이엠 그라운드 룰</h3>
 
 ✅ 우울하지 말고 우웅하기 <br/>
 ✅ 서로 칭찬하고 굿 ~~ 해주기 <br/>
 ✅ 자기가 오늘 할일을 시작하기 전에 리뷰먼저! <br/>
 ✅ 화이팅하자 ㅋㅋ <br/>
-
