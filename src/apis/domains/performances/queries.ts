@@ -19,6 +19,7 @@ import {
   postPerformance,
   updatePerformance,
 } from "./api";
+import axios from "axios";
 
 export const PERFORMANCE_QUERY_KEY = {
   DETAIL: "detail",
@@ -158,23 +159,9 @@ export const usePostPerformance = () => {
       });
 
       if (isPerformanceResponse(res) && res.status === 201) {
-        //   // 프리렌더 작업 수행
-        //   const prerenderResponse = await fetch(`${import.meta.env.VITE_CLIENT_URL}/api/prerender`, {
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({ performanceId: res.data.performanceId }),
-        //   });
-
-        //   console.log("prerenderResponse is: ", prerenderResponse);
-
-        //   if (prerenderResponse.ok) {
-        //     console.log("Prerender successful");
-        //   } else {
-        //     console.error("Prerender failed");
-        //   }
-
+        axios.post(import.meta.env.VITE_DEPLOY_HOOK_URL as string).catch((error) => {
+          console.error("Deployment hook error:", error);
+        });
         // 등록 완료 페이지로 이동
         navigate("/register-complete", {
           state: { performanceId: res.data.performanceId },
